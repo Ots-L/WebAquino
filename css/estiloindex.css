@@ -1,0 +1,1207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   CUERPO DE LA PÁGINA
+   ========================= */
+
+body {
+    background: hsl(0, 20%, 95%);
+    color: rgb(250, 7, 40);
+}
+
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+   ========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(243, 235, 235, 0.952);
+}
+
+
+/* =========================
+   LOGO AQUINO
+   ========================= */
+
+.contenedor-principal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+.logo-container {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(243, 239, 239);
+}
+
+.loco {
+    width: 50px !important;
+    height: 50px !important;
+
+    object-fit: contain !important;
+
+    margin-right: 8px;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   REDES SOCIALES
+   ========================= */
+
+.redes-sociales {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+
+    margin: 0;
+}
+
+.redes-sociales li {
+    list-style: none;
+}
+
+.redes-sociales a {
+    color: rgb(245, 242, 242);
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.redes-sociales a:hover {
+    color: rgb(29, 28, 28);
+}
+
+
+/* =========================
+   ICONOS DE REDES
+   ========================= */
+
+.icon-nav {
+    width: 30px !important;
+    height: 30px !important;
+
+    object-fit: contain !important;
+
+    margin-right: 8px;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   MENÚ DESPLEGABLE
+   ========================= */
+
+.menu-desplegable {
+    position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+
+/* Ocultar checkbox */
+
+#btn-menu {
+    display: none;
+}
+
+
+/* Botón Menú */
+
+.lbl-menu {
+    color: rgb(245, 242, 242);
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 10px 15px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+
+    user-select: none;
+
+    display: block;
+}
+
+.lbl-menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    color: rgb(29, 28, 28);
+}
+
+
+/* =========================
+   OPCIONES DEL MENÚ
+   ========================= */
+
+.nav-opciones {
+    position: absolute;
+
+    right: 0;
+    top: 55px;
+
+    width: 180px;
+
+    padding: 10px 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(243, 235, 235, 0.2);
+
+    border-radius: 8px;
+
+    list-style: none;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.3s ease;
+}
+
+
+/* Elementos del menú */
+
+.nav-opciones li {
+    width: 100%;
+
+    list-style: none;
+}
+
+
+/* Enlaces del menú */
+
+.nav-opciones a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 18px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.nav-opciones a:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    color: #ff4964;
+}
+
+
+/* Mostrar menú al hacer clic */
+
+#btn-menu:checked ~ .nav-opciones {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+
+.seccion-prueba {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 0;
+}
+
+/* TÍTULOS DE LAS SECCIONES */
+
+
+.seccion-prueba h2 {
+    position: static;
+    display: inline-block;
+    margin: 20px 0 10px 25px;
+    padding: 12px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #ff315d;
+    background: rgba(10, 10, 20, 0.85);
+    border: 1px solid #ff315d;
+    border-radius: 8px;
+    text-shadow: 0 0 8px #ff315d, 0 0 18px #ff315d;
+    box-shadow: 0 0 12px rgba(255, 49, 93, 0.4);
+}
+
+
+/* =========================
+   SECCIÓN 0 - Inicio
+   ========================= */
+.seccion-0 {
+    
+     background-image: url("../img/seccion0.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* =========================
+   SECCIÓN 1
+   ========================= */
+
+.seccion-1 {
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url("../img/fondo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 0;
+    min-height: auto;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+
+.Lista-subtitulos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1500px;
+    margin: 10px auto 0 auto;
+    gap: 20px;
+    padding: 0 20px 30px;
+}
+
+.columna-triptico {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Descripción debajo de títulos */
+.columna-triptico p {
+    color: hsl(352, 17%, 91%);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Enlaces de las imágenes */
+.columna-triptico a {
+    width: 80%;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* =========================
+   TÍTULOS DE LAS COLUMNAS CON NEÓN
+   ========================= */
+
+.Lista-subtitulos h3 {
+    color: #f3edee;
+    font-size: clamp(1.8rem, 2vw, 2.6rem);
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0 0 10px;
+    text-shadow:
+        0 0 5px rgba(204, 11, 59, 0.9),
+        0 0 10px rgba(131, 10, 44, 0.856),
+        0 0 18px rgb(224, 10, 64);
+    filter: drop-shadow(0 0 5px rgb(201, 34, 117));
+}
+
+
+
+@keyframes neon-flicker {
+    from {
+        text-shadow: 
+            0 0 8px #ff315d,
+            0 0 15px #ff315d,
+            0 0 25px rgba(255, 49, 93, 0.8);
+    }
+    to {
+        text-shadow: 
+            0 0 12px #ff315d,
+            0 0 20px #ff315d,
+            0 0 35px rgba(255, 49, 93, 1);
+    }
+}
+
+/* =========================
+   IMÁGENES CIRCULARES (Videos y Canales)
+   ========================= */
+
+.imagen-circular {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    filter: brightness(1) saturate(1);
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 49, 93, 0);
+}
+
+.imagen-circular:hover {
+    transform: scale(1.08);
+    filter: brightness(1.3) saturate(1.5) hue-rotate(-10deg);
+    border: 2px solid #ff315d;
+    box-shadow: 
+        0 0 15px rgba(255, 49, 93, 0.8),
+        0 0 30px rgba(255, 49, 93, 0.5),
+        inset 0 0 20px rgba(255, 49, 93, 0.3);
+}
+
+/* =========================
+   CONTENEDOR CANALES
+   ========================= */
+
+.contenedor-canales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.contenedor-canales a {
+    width: auto;
+    margin-bottom: 0;
+    overflow: visible;
+}
+
+/* =========================
+   CANALES CIRCULARES
+   ========================= */
+
+.canal-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    filter: brightness(1) saturate(1);
+    box-shadow: 0 0 15px rgba(255, 49, 93, 0.3);
+}
+
+.canal-img:hover {
+    transform: scale(1.12) rotate(5deg);
+    filter: brightness(1.4) saturate(1.6);
+    box-shadow: 
+        0 0 25px rgba(255, 49, 93, 1),
+        0 0 40px rgba(255, 49, 93, 0.7),
+        inset 0 0 30px rgba(255, 49, 93, 0.4);
+}
+
+.img-bloxb { 
+    border: 3px solid #f09104;
+    box-shadow: 0 0 15px rgba(240, 145, 4, 0.4);
+}
+
+.img-bloxb:hover {
+    border: 3px solid #f09104;
+    box-shadow: 
+        0 0 25px rgba(240, 145, 4, 1),
+        0 0 40px rgba(240, 145, 4, 0.7),
+        inset 0 0 30px rgba(240, 145, 4, 0.3);
+}
+
+.img-kick { 
+    border: 3px solid #8237d8;
+    box-shadow: 0 0 15px rgba(130, 55, 216, 0.4);
+}
+
+.img-kick:hover {
+    border: 3px solid #8237d8;
+    box-shadow: 
+        0 0 25px rgba(130, 55, 216, 1),
+        0 0 40px rgba(130, 55, 216, 0.7),
+        inset 0 0 30px rgba(130, 55, 216, 0.3);
+}
+
+.img-youtube { 
+    border: 3px solid #b1700f;
+    box-shadow: 0 0 15px rgba(177, 112, 15, 0.4);
+}
+
+.img-youtube:hover {
+    border: 3px solid #b1700f;
+    box-shadow: 
+        0 0 25px rgba(177, 112, 15, 1),
+        0 0 40px rgba(177, 112, 15, 0.7),
+        inset 0 0 30px rgba(177, 112, 15, 0.3);
+}
+
+/* =========================
+   FAVORITOS - CONTENEDOR
+   ========================= */
+
+.contenedor-favoritos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* =========================
+   FAVORITOS - TARJETAS
+   ========================= */
+
+.tarjeta-juego {
+    background: rgba(40, 25, 55, 0.85);
+    border: 2px solid #573b75;
+    border-radius: 15px;
+    width: 160px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-stardew {
+    background: rgba(33, 23, 44, 0.85);
+}
+
+.tarjeta-juego:hover {
+    transform: translateY(-8px) scale(1.05);
+    border-color: #ff315d;
+    background: rgba(40, 25, 55, 1);
+    box-shadow: 
+        0 0 20px rgba(255, 49, 93, 0.8),
+        0 0 40px rgba(255, 49, 93, 0.5),
+        inset 0 0 15px rgba(255, 49, 93, 0.2);
+}
+
+.juego-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+    filter: brightness(1) drop-shadow(0 0 5px rgba(255, 49, 93, 0.3));
+}
+
+.img-stardew {
+    margin-bottom: 20px;
+}
+
+.tarjeta-juego:hover .juego-img {
+    transform: scale(1.15) rotate(-5deg);
+    filter: brightness(1.3) drop-shadow(0 0 12px rgba(255, 49, 93, 0.8));
+}
+
+.tarjeta-juego p {
+    color: #f3efef;
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-juego:hover p {
+    color: #ff315d;
+    text-shadow: 0 0 8px rgba(255, 49, 93, 0.8);
+}
+
+.tarjeta-juego span {
+    color: #a77cff;
+    font-size: 11px;
+    display: block;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(168, 124, 255, 0.4);
+}
+
+.tarjeta-juego:hover span {
+    color: #ff315d;
+    text-shadow: 0 0 10px rgba(255, 49, 93, 0.8);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1200px) {
+    .Lista-subtitulos {
+        width: 90%;
+        gap: 5px;
+    }
+    
+    .columna-triptico {
+        width: 400px;
+    }
+    
+    .columna-triptico a {
+        width: 90%;
+    }
+    
+    .canal-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Lista-subtitulos {
+        flex-direction: column;
+        width: 95%;
+        gap: 50px;
+        margin-top: 160px;
+    }
+    
+    .columna-triptico {
+        width: 100%;
+    }
+    
+    .columna-triptico a {
+        width: 80%;
+    }
+    
+    .canal-img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+
+/* =========================
+   SECCIÓN 2 - DIRECTOS
+   ========================= */
+
+
+
+.seccion-2 {
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url("../img/fonde2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.seccion-2 h2 {
+    position: static;
+    display: inline-block;
+    margin: 20px 0 10px 25px;
+    padding: 12px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #ff315d;
+    background: rgba(10, 10, 20, 0.85);
+    border: 1px solid #ff315d;
+    border-radius: 8px;
+    text-shadow:
+        0 0 5px rgba(255, 61, 109, 0.9),
+        0 0 10px rgba(255, 61, 109, 0.7);
+    box-shadow: 0 0 12px rgba(255, 49, 93, 0.25);
+}
+
+.kick-container {
+    width: 90%;
+    max-width: 1500px;
+    height: 700px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 10px;
+}
+
+.kick-player {
+    flex: 1;
+}
+
+.kick-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.kick-chat {
+    width: 350px;
+}
+
+.kick-chat iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .kick-container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 25px;
+    }
+
+    .kick-chat {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.kick-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 15px rgba(255, 49, 93, 0.6),
+        0 0 30px rgba(255, 49, 93, 0.3),
+        inset 0 0 15px rgba(255, 49, 93, 0.1);
+}
+
+.kick-player iframe:hover {
+    box-shadow: 
+        0 0 20px rgba(255, 49, 93, 0.8),
+        0 0 40px rgba(255, 49, 93, 0.5),
+        inset 0 0 20px rgba(255, 49, 93, 0.2);
+}
+
+.kick-chat iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 15px rgba(255, 49, 93, 0.6),
+        0 0 30px rgba(255, 49, 93, 0.3),
+        inset 0 0 15px rgba(255, 49, 93, 0.1);
+}
+
+.kick-chat iframe:hover {
+    box-shadow: 
+        0 0 20px rgba(255, 49, 93, 0.8),
+        0 0 40px rgba(255, 49, 93, 0.5),
+        inset 0 0 20px rgba(255, 49, 93, 0.2);
+}
+
+
+
+/* =========================
+   SECCIÓN 3 - CONUNIDAD
+   ========================= */
+/* SECCIÓN 3 */
+.seccion-3 {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url("../img/fondo3-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.seccion-3 h2 {
+    position: static;
+    display: inline-block;
+    margin: 20px 0 10px 25px;
+    padding: 12px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #ff315d;
+    background: rgba(10, 10, 20, 0.85);
+    border: 1px solid #ff315d;
+    border-radius: 8px;
+    text-shadow:
+        0 0 5px rgba(255, 61, 109, 0.9),
+        0 0 10px rgba(255, 61, 109, 0.7);
+    box-shadow: 0 0 12px rgba(255, 49, 93, 0.25);
+}
+
+.comunidad-layout {
+    width: 95%;
+    max-width: 1600px;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fanart-col {
+    width: 30%;  /* ← Cambia esto para hacerlos más o menos anchos */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.fanart-card {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.25);
+    box-shadow:
+        0 0 15px rgba(255, 49, 93, 0.45),
+        0 0 30px rgba(255, 49, 93, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fanart-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow:
+        0 0 18px rgba(255, 49, 93, 0.8),
+        0 0 38px rgba(255, 49, 93, 0.45);
+}
+
+.fanart-card img {
+    width: 100%;
+    height: 290px;  
+    object-fit: cover;
+    display: block;
+}
+/* CARRUSEL CENTRAL */
+.carrusel-contenedor {
+    width: 32%;
+    min-width: 280px;
+    position: relative;
+    text-align: center;
+}
+
+.carrusel-contenedor h3 {
+    color: #ff315d;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 4px rgba(255, 61, 109, 0.8),
+        0 0 8px rgba(255, 61, 109, 0.6);
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.3);
+    box-shadow:
+        0 0 15px rgba(255, 49, 93, 0.6),
+        0 0 30px rgba(255, 49, 93, 0.3);
+}
+
+.carrusel-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.carrusel-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrusel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    background: #000;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 49, 93, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.carrusel-btn:hover {
+    background: rgba(255, 49, 93, 1);
+    box-shadow: 0 0 15px rgba(255, 49, 93, 0.8);
+}
+
+.carrusel-prev {
+    left: 10px;
+}
+
+.carrusel-next {
+    right: 10px;
+}
+
+@media (max-width: 1000px) {
+    .comunidad-layout {
+        flex-direction: column;
+    }
+
+    .fanart-col {
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fanart-card {
+        width: 180px;
+    }
+
+    .carrusel-contenedor {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SECCIÓN PRINCIPAL
+   ========================= */
+
+.seccion-0 {
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/seccion0.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+.principal-contenido {
+
+    min-height: 100vh;
+
+    width: 90%;
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding-top: 60px;
+}
+
+
+/* =========================
+   TEXTO PRINCIPAL
+   ========================= */
+
+.principal-texto {
+
+    max-width: 600px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+
+.principal-bienvenida {
+
+    display: inline-block;
+
+    color: #ff315d;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 8px #ff315d,
+        0 0 15px #ff315d;
+}
+
+
+.principal-texto h1 {
+
+    font-size: 90px;
+
+    margin: 0;
+
+    color: white;
+
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 49, 93, 0.8);
+}
+
+
+.principal-texto h3 {
+
+    font-size: 25px;
+
+    margin: 5px 0 20px;
+
+    color: #ff315d;
+
+    font-weight: bold;
+}
+
+
+.principal-texto p {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #eeeeee;
+
+    max-width: 550px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÓN
+   ========================= */
+
+.boton-principal {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #ff315d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    border: 1px solid #ff315d;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 10px rgba(255, 49, 93, 0.5);
+}
+
+
+.boton-principal:hover {
+
+    background: transparent;
+
+    color: #ff315d;
+
+    box-shadow:
+        0 0 15px #ff315d,
+        0 0 30px rgba(255, 49, 93, 0.5);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOTO DE AQUINO
+   ========================= */
+
+.principal-foto {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 400px;
+
+    z-index: 2;
+}
+
+
+.circulo-foto {
+
+    width: 380px;
+
+    height: 380px;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #ff315d,
+        #7a1cff,
+        #9a02d6
+    );
+
+    box-shadow:
+        0 0 20px #ff315d,
+        0 0 50px rgba(255, 49, 93, 0.5);
+
+    animation: brillo 3s infinite alternate;
+}
+
+
+.circulo-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #111;
+}
+
+
+/* =========================
+   ANIMACIÓN
+   ========================= */
+
+@keyframes brillo {
+
+    from {
+        box-shadow:
+            0 0 15px #ff315d,
+            0 0 30px rgba(255, 49, 93, 0.3);
+    }
+
+    to {
+        box-shadow:
+            0 0 25px #ff315d,
+            0 0 60px rgba(255, 49, 93, 0.7);
+    }
+
+}
